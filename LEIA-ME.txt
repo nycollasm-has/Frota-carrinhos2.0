@@ -1,0 +1,13 @@
+CENTRAL DE CRONÔMETROS — FIREBASE
+
+1. Firebase Console > Authentication > Users > Add user: crie manualmente e-mail/senha para cada operador. NÃO habilite cadastro público.
+2. Firestore Database > Regras: cole o conteúdo de firestore.rules e clique Publicar.
+3. GitHub > repositório > Code > Add file > Upload files: envie index.html e app.js para a RAIZ da branch main. Substitua o index.html anterior. Não envie o arquivo original.html.
+4. Settings > Pages: Deploy from a branch / main / (root).
+5. Abra seu endereço GitHub Pages, faça login e clique UMA VEZ em "Cadastrar frota inicial".
+6. Nos demais celulares, entre com as contas criadas no Firebase Authentication.
+
+ATENÇÃO: O histórico antigo salvo no localStorage do navegador NÃO é migrado automaticamente para o Firestore. Exporte o CSV na versão anterior antes de substituir o site.
+As regras fornecidas permitem a todos os usuários autenticados ler e editar a frota e as locações; não compartilhe senhas e remova contas de ex-operadores no Authentication.
+Para evitar exclusões indevidas, uma futura versão deve adotar permissões mais restritas e trilha de auditoria. A versão atual é uma primeira implantação operacional.
+A página precisa permanecer aberta para emitir alarmes; áudio em segundo plano pode ser limitado pelo celular.
